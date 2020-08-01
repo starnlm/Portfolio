@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Sacramento&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-weight: 300;
+  height: 100%;
+}
+.Container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background:#ffe2ff ;
+  font-family: 'Recursive', sans-serif;
+
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 100px;
+  padding-top: 25px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.Resume {
+  margin-left: 0;
+}
+
+nav a {
+  color: #7d5a5a;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+nav a:hover {
+  color: #204051;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 0;
+  background-color:  #204051;
+  position: absolute;
+  top: 0;
+  transition: all ease-in-out 300ms;
+}
+ nav a:hover::before {
+   width: 100%;
+ }
+
+
+.Section1 {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background-image: url("Images/background/download.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 312.5px ;
+  width: 100%;
+  text-align: center;
+}
+
+
+.HeaderImg {
+  margin: auto 100px auto;
+}
+
+.mainImg {
+  box-shadow: 10px 10px 50px -10px black;
+  border-radius: 50%;
+}
+
+.HeaderText {
+  margin-left: 200px;
+  /* text-shadow: 5px 5px 10px hsl(234, 12%, 34%); */
+  /* color: #7d5a5a; */
+  /* color: #204051; */
+
+}
+
+.Title {
+  font-size: 70px;
+  font-family: 'Sacramento', cursive;
+  font-weight: 900;
+  margin:90px auto 0 auto;
+  color: #204051
+}
+
+.TileText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.Section2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sideBar {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  height: 550px;
+  width: 150px;
+  /* border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px; */
+}
+
+.one {
+  background-color: #ffe2ff;
+  border-color: #7d5a5a;
+  border-width: 2px;
+  border-style: solid;
+}
+.secHead {
+  color: #7d5a5a;
+  flex-basis: 300px;
+  font-family: 'Montserrat', sans-serif;
+  transform: rotate(270deg);
+  font-size: 32px;
+}
+
+.sec2Text {
+  margin-top: 150px;
+  height: 500px;
+  width: 1000px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Oxygen', sans-serif;
+
+ }
+
+.sec2heading {
+  font-size: 50px;
+  margin-bottom: 0;
+  color: #552244;
+  font-family: 'Great Vibes', cursive;
+}
+
+.sec2para {
+  font-weight: 300;
+  color: #596157;
+}
+
+.AboutImgArea {
+  display: flex;
+  text-align: left;
+  margin-top: 75px;
+  line-height: 1.5;
+}
+
+.abtImg {
+  width: 1400px;
+  height: 200px;
+  background-image: url('Images/icons/Layer1.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin: auto 50px auto 25px;
+}
+.abtImg:hover {
+  background-image: url('Images/icons/Layer2.png');
+}
+.Section3 {
+  background-color:  #ffe2ff;
+}
+
+.two {
+  background-color: white;
+  border-color: #7d5a5a;
+  border-width: 2px;
+  border-style: solid;
+}
+
+
+
+
+
+                  /* Important Seperation Between Mobile and Desktop Screens*/
+
+@media (max-width: 1000px) {
+  .Section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainImg {
+    height: 125px;
+    width: 125px;
+  }
+  .Title {
+    font-size: 50px;
+    margin-top: 0;
+  }
+
+  .HeaderText {
+    order: 2;
+    margin: auto;
+  }
+
+  .HeaderImg {
+    order: 1;
+    margin-top: 50px;
+  }
+  .TileText {
+    font-size: 15px;
+   }
+  .AboutImgArea {
+    flex-direction: column;
+  }
+
+  .sec2heading {
+    font-size: 40px;
+  }
+
+  .sec2para {
+    font-size: 15px;
+  }
+
+  .AboutImgArea {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+  }
+
+  .sec2Text {
+    margin-top: 50px;
+  }
+
+  .secHead {
+    font-size: 28px;
+    width: 400px;
+  }
+
+  .sideBar {
+    width: 100px;
+  }
+
+  .abtImg {
+    height: 200px;
+    width: 200px;
+  }
+}
